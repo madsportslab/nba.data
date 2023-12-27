@@ -1,0 +1,21 @@
+name: sync
+
+on:
+  schedule:
+    - cron: '8 23 * * *'
+
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+        uses: madsportslab/nba-download@v1
+        author_name: Stephen Hu
+        author_email: stephen@madsportslab.com
+        message: 'NBA API data daily sync'
+
+
