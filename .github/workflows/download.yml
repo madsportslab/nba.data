@@ -1,4 +1,4 @@
-name: sync
+name: download
 
 on:
   schedule:
@@ -14,8 +14,3 @@ jobs:
         with:
           fetch-depth: 0
         uses: madsportslab/nba-download@v1
-        author_name: Stephen Hu
-        author_email: stephen@madsportslab.com
-        message: 'NBA API data daily sync'
-
-
