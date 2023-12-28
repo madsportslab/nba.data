@@ -13,4 +13,4 @@ jobs:
         - uses: actions/checkout@v4
           with:
             fetch-depth: 0
-        - uses: actions/nba-download@v1
+        - uses: actions/nba-download-action@v1
