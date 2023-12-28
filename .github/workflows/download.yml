@@ -7,10 +7,15 @@ on:
   workflow_dispatch:
 
 jobs:
-  sync:
+  download:
     runs-on: ubuntu-latest
     steps:
-        - uses: actions/checkout@v4
+        - name: checkout repository
+          uses: actions/checkout@v4
           with:
             fetch-depth: 0
-        - uses: actions/nba-download@v1
+        - name: download latest
+          uses: madsportslab/nba-download@v1
+        - name: list downloaded files
+          run: |
+            ls -la
